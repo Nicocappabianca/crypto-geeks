@@ -1,0 +1,8 @@
+{
+  "name": "crypto-geeks",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Nicocappabianca/crypto-geeks.git",
+  "author": "nicocappabianca <nicolas.cappabianca@gmail.com>",
+  "license": "MIT"
+}
