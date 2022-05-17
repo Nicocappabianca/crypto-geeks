@@ -16,30 +16,30 @@ contract CryptoGeeks is ERC721, ERC721Enumerable {
     maxSupply = _maxSupply; 
   }
 
-    function mint() public { 
-      uint256 current = _idCounter.current();
-      require(current < maxSupply, "No CryptoGeeks Left ");
+  function mint() public { 
+    uint256 current = _idCounter.current();
+    require(current < maxSupply, "No CryptoGeeks Left ");
 
-      // current: is the ID with which you mint
-      _safeMint(msg.sender, current);
-      _idCounter.increment(); 
-    }
+    // current: is the ID with which you mint
+    _safeMint(msg.sender, current);
+    _idCounter.increment(); 
+  }
 
-    // Overrides required by Solidity
-    function _beforeTokenTransfer(address from, address to, uint256 tokenId)
-        internal
-        override(ERC721, ERC721Enumerable)
-    {
-        super._beforeTokenTransfer(from, to, tokenId);
-    }
+  // Overrides required by Solidity
+  function _beforeTokenTransfer(address from, address to, uint256 tokenId)
+      internal
+      override(ERC721, ERC721Enumerable)
+  {
+      super._beforeTokenTransfer(from, to, tokenId);
+  }
 
-    function supportsInterface(bytes4 interfaceId)
-        public
-        view
-        override(ERC721, ERC721Enumerable)
-        returns (bool)
-    {
-        return super.supportsInterface(interfaceId);
-    }
+  function supportsInterface(bytes4 interfaceId)
+      public
+      view
+      override(ERC721, ERC721Enumerable)
+      returns (bool)
+  {
+      return super.supportsInterface(interfaceId);
+  }
 }
  
