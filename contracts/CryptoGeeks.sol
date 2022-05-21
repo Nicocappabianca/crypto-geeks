@@ -63,7 +63,7 @@ contract CryptoGeeks is ERC721, ERC721Enumerable, CryptoGeeksDNA {
                 )
             );
         }
-
+        // add topType outside the block to avoid the "stack too deep" error
         return string(abi.encodePacked(params, "&topType=", getTopType(_dna)));
     }
 
